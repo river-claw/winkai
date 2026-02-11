@@ -11,6 +11,7 @@ body {
     color: #333;
     background-color: #ffffff;
     min-height: 100vh;
+    padding-top: 80px; /* 避免被固定导航栏遮挡 */
 }
 
 .container {
