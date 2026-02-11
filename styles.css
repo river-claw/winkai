@@ -28,7 +28,7 @@ body {
     top: 0;
     z-index: 100;
     border-bottom: 2px solid transparent;
-    background: linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    background: white;
 }
 
 .navbar .container {
