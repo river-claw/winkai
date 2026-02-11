@@ -12,8 +12,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile menu toggle (if needed)
-// Add any additional interactive functionality here
+// Mobile menu toggle functionality
+const mobileMenuButton = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenuButton && navLinks) {
+    mobileMenuButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileMenuButton.classList.toggle('active');
+    });
+}
 
 // Form submission handling
 const contactForm = document.querySelector('.contact-form');
@@ -25,3 +33,23 @@ if (contactForm) {
         contactForm.reset();
     });
 }
+
+// Animation on scroll
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+        }
+    });
+}, observerOptions);
+
+// Observe all section elements
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+});
