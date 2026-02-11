@@ -92,10 +92,11 @@ body {
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 2rem;
   position: relative;
   overflow: hidden;
+  justify-content: flex-start;
 }
 
 .hero::before {
